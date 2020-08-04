@@ -1,7 +1,6 @@
 import  requests
 
-def get_datasets(username="NCATSTranslator", repo="Text-Mining-Provider-Roadmap"):
-    path = "sample-kg/text-mined/kgx"
+def get_datasets(username="NCATSTranslator", repo="Text-Mining-Provider-Roadmap", path="sample-kg/text-mined/kgx"):
     url = "https://api.github.com/repos/{}/{}/contents/{}".format(
             username, repo, path)
 
