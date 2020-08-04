@@ -1,5 +1,4 @@
 import csv
-import json
 import os
 import re
 
@@ -42,9 +41,12 @@ def load_annotations(data_folder):
 
     for (_id, edge_label), docs in results.items():
         doc = {"_id": _id, edge_label: docs}
-        print(json.dumps(doc, indent=2))
-        #yield doc
+        yield doc
 
 
 if __name__ == "__main__":
-    load_annotations("test-data")
+    import json
+
+    annotations = load_annotations("test-data")
+    for a in annotations:
+        print(json.dumps(a, indent=2))
