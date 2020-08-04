@@ -47,6 +47,6 @@ def load_annotations(data_folder):
 if __name__ == "__main__":
     import json
 
-    annotations = load_annotations("test-data")
+    annotations = load_annotations("test-data/v0.1/")
     for a in annotations:
         print(json.dumps(a, indent=2))
