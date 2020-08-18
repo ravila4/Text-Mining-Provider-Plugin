@@ -42,10 +42,15 @@ def load_annotations(data_folder):
                 "relation": rec["relation"],
                 "association_type": association_type,
                 "evidence": evidence}
-        results.setdefault((_id, edge_label), []).append(data)
+        results.setdefault((_id, subject_category), {}).setdefault(
+                edge_label, []).append(data)
 
-    for (_id, edge_label), docs in results.items():
-        doc = {"_id": _id, edge_label: docs}
+    for (_id, category), edges in results.items():
+        doc = {}
+        doc["_id"] = _id
+        doc["category"] = category
+        for edge_label, docs in edges.items():
+            doc[edge_label] = docs
         yield doc
 
 
