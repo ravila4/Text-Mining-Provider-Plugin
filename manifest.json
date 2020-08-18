@@ -1,11 +1,13 @@
 {
     "version": "0.1",
     "requires" : ["pandas"],
-    "dumper" : {
-        "data_url" : "dumper:get_datasets"
+    "dumper": {
+        "data_url": ["https://raw.githubusercontent.com/NCATSTranslator/Text-Mining-Provider-Roadmap/master/sample-kg/text-mined/kgx/v0.1/sample-craft-edges.v0.1.kgx.tsv",
+                      "https://raw.githubusercontent.com/NCATSTranslator/Text-Mining-Provider-Roadmap/master/sample-kg/text-mined/kgx/v0.1/sample-craft-nodes.v0.1.kgx.tsv"],
+        "uncompress": false
     },
     "uploader" : {
-        "parser" : "parser:load_annotations",
-        "on_duplicates" : "error"
+        "parser": "parser:load_annotations",
+        "on_duplicates": "error"
     }
 }
