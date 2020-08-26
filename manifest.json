@@ -4,7 +4,8 @@
     "dumper": {
         "data_url": ["https://raw.githubusercontent.com/NCATSTranslator/Text-Mining-Provider-Roadmap/master/sample-kg/text-mined/kgx/v0.1/sample-craft-edges.v0.1.kgx.tsv",
                       "https://raw.githubusercontent.com/NCATSTranslator/Text-Mining-Provider-Roadmap/master/sample-kg/text-mined/kgx/v0.1/sample-craft-nodes.v0.1.kgx.tsv"],
-        "uncompress": false
+        "uncompress": false,
+        "release": "version:get_release"
     },
     "uploader" : {
         "parser": "parser:load_annotations",
